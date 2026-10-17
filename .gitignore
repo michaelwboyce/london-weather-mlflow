@@ -1,5 +1,3 @@
-# Dataset not redistributed by default
-london_weather.csv
 mlruns/
 mlartifacts/
 __pycache__/
