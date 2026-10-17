@@ -29,22 +29,28 @@ All three satisfied the project's target of **RMSE ≤ 3 °C**. Training: **12,2
 
 ## Run locally
 
-Requires Python 3.10+.
+Requires Python 3.10+ and `london_weather.csv` in the repository directory.
 
 ```bash
 python -m pip install -r requirements.txt
 python london_weather_mlflow.py
 ```
 
-**Dataset:** This repository does **not** include `london_weather.csv`. Download/export it from your authorized DataCamp project environment, if permitted by its dataset license, and put it alongside `london_weather_mlflow.py`. The script will explain this requirement if the file is absent.
+If the CSV has not yet been uploaded to this repository, obtain it from the authorized DataCamp project and place it alongside the script.
 
-MLflow stores run information locally by default. If installed, you can inspect it with:
+MLflow stores run information locally by default. To inspect it:
 
 ```bash
 mlflow ui
 ```
 
 Then open the URL printed by MLflow.
+
+## Dataset and attribution
+
+Data: London Weather Data, associated with the [Kaggle London Weather Data collection](https://www.kaggle.com/datasets/emmanuelfwerr/london-weather-data) by Emmanuel F. Werr (reported as **CC0 / public domain**), compiled from historical weather observations. The project file contains 15,341 rows and 10 columns covering 1979–2020. The CSV was supplied from the [DataCamp Predicting Temperature in London project](https://www.datacamp.com/projects/1725). The uploaded CSV's exact byte-for-byte identity with Kaggle's version has not been independently verified.
+
+The Python workflow is a portfolio adaptation of the DataCamp MLflow exercise. Please retain source attribution when redistributing the dataset.
 
 ## Skills
 
@@ -54,7 +60,3 @@ Then open the URL printed by MLflow.
 - Missing-value imputation without train/test leakage
 - RMSE-based model comparison
 - MLflow experiment tracking and model artifacts
-
-## Attribution
-
-Created as a portfolio adaptation of a DataCamp London weather regression and MLflow project. Original exercise and dataset are associated with DataCamp. The dataset is omitted pending redistribution permission.
